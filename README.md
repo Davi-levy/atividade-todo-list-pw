@@ -1,4 +1,8 @@
-# 📝 To-Do List API — Node.js (HTTP + CommonJS)
+# 📝 ATIVIDADE API — Node.js (HTTP + CommonJS)
+
+DAVI LEVY LEMOS SOARES
+2º DS MANHÃ 
+TURMA A
 
 > Atividade API PW II — Prof. Marcos Brandão Rios — Etec Bento Quirino  
 > Nível: **Sênior (MB)** — inclui Júnior + Pleno + Sênior
@@ -7,7 +11,7 @@
 
 ## Descrição do Projeto
 
-API RESTful de lista de tarefas construída **sem frameworks**, utilizando apenas:
+API de lista de tarefas construída **sem frameworks**, utilizando apenas:
 
 - Node.js puro
 - Módulo nativo `http`
@@ -23,8 +27,6 @@ API RESTful de lista de tarefas construída **sem frameworks**, utilizando apena
 | Node.js    | 18+    |
 | JavaScript | ES2020 |
 
-Sem dependências externas — apenas módulos nativos do Node.js.
-
 ---
 
 ## Estrutura de Pastas
@@ -36,13 +38,13 @@ to_do_list/
 └── src/
     ├── app.js                  ← servidor HTTP
     ├── controllers/
-    │   └── taskController.js   ← controla o fluxo das requisições
+    │   └── TarefaController.js   ← controla o fluxo das requisições
     ├── models/
-    │   └── taskModel.js        ← define a estrutura da tarefa
+    │   └── TarefaModelos.js        ← define a estrutura da tarefa
     ├── routes/
-    │   └── taskRoutes.js       ← mapeia URLs para controllers
+    │   └── TarefaRoutes.js       ← mapeia URLs para controllers
     └── services/
-        └── taskService.js      ← lógica de negócio + persistência
+        └── TarefaService.js      ← lógica de negócio + persistência
 ```
 
 ---
@@ -56,10 +58,6 @@ git clone https://github.com/seu-usuario/to_do_list.git
 # 2. Entre na pasta
 cd to_do_list
 
-# Não há dependências para instalar — projeto usa apenas módulos nativos
-```
-
----
 
 ## Execução
 
@@ -75,13 +73,13 @@ O servidor iniciará em: `http://localhost:3000`
 
 Base URL: `http://localhost:3000`
 
-| Método | Rota          | Descrição                      | Nível   |
-|--------|---------------|--------------------------------|---------|
-| GET    | /tasks        | Listar todas as tarefas        | Base    |
-| POST   | /tasks        | Criar nova tarefa              | Base    |
-| GET    | /tasks/:id    | Buscar tarefa por ID           | Pleno   |
-| PUT    | /tasks/:id    | Atualizar título e/ou status   | Júnior  |
-| DELETE | /tasks/:id    | Deletar tarefa                 | Base    |
+| Método | Rota          | Descrição                      |
+|--------|---------------|--------------------------------|
+| GET    | /tasks        | Listar todas as tarefas        |
+| POST   | /tasks        | Criar nova tarefa              |
+| GET    | /tasks/:id    | Buscar tarefa por ID           |
+| PUT    | /tasks/:id    | Atualizar título e/ou status   |
+| DELETE | /tasks/:id    | Deletar tarefa                 |
 
 ---
 
@@ -134,9 +132,7 @@ DELETE /tasks/1
 
 ## Explicação da Solução
 
-### Arquitetura em Camadas
-
-O projeto segue a separação de responsabilidades:
+O projeto segue a separação
 
 - **Routes** — porta de entrada; identifica URL e método HTTP, delega ao controller
 - **Controller** — lê o body, chama o service, envia a resposta JSON
