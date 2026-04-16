@@ -53,10 +53,10 @@ to_do_list/
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/seu-usuario/to_do_list.git
+git clone https://github.com/Davi-levy/atividade-todo-list-pw/
 
 # 2. Entre na pasta
-cd to_do_list
+cd atividade-todo-list-pw-main
 
 
 ## Execução
