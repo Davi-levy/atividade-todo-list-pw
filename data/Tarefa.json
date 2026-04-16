@@ -1,0 +1,17 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Estudar Node.js",
+      "completed": false,
+      "createdAt": "2026-04-15T19:51:01.467Z"
+    },
+    {
+      "id": 8,
+      "title": "estudando com o DAVI",
+      "completed": false,
+      "createdAt": "2026-04-16T01:56:21.095Z"
+    }
+  ],
+  "idCounter": 12
+}

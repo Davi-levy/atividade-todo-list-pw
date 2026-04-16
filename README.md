@@ -1,7 +1,4 @@
-# 📝 Atividade API — Node.js (HTTP + CommonJS)
-
-DAVI LEVY LEMOS SOARES 
-2º DS MANHÃ TURMA A
+# 📝 To-Do List API — Node.js (HTTP + CommonJS)
 
 > Atividade API PW II — Prof. Marcos Brandão Rios — Etec Bento Quirino  
 > Nível: **Sênior (MB)** — inclui Júnior + Pleno + Sênior
@@ -10,7 +7,7 @@ DAVI LEVY LEMOS SOARES
 
 ## Descrição do Projeto
 
-API de lista de tarefas construída , utilizando apenas:
+API RESTful de lista de tarefas construída **sem frameworks**, utilizando apenas:
 
 - Node.js puro
 - Módulo nativo `http`
@@ -35,17 +32,17 @@ Sem dependências externas — apenas módulos nativos do Node.js.
 ```
 to_do_list/
 ├── data/
-│   └── Tarefas.json              ← banco de dados em arquivo (Nível Sênior)
+│   └── tasks.json              ← banco de dados em arquivo (Nível Sênior)
 └── src/
     ├── app.js                  ← servidor HTTP
     ├── controllers/
-    │   └── TarefaController.js   ← controla o fluxo das requisições
+    │   └── taskController.js   ← controla o fluxo das requisições
     ├── models/
-    │   └── TarefaModelos.js        ← define a estrutura da tarefa
+    │   └── taskModel.js        ← define a estrutura da tarefa
     ├── routes/
-    │   └── TarefaRoutes.js       ← mapeia URLs para controllers
+    │   └── taskRoutes.js       ← mapeia URLs para controllers
     └── services/
-        └── TarefaService.js      ← lógica de negócio + persistência
+        └── taskService.js      ← lógica de negócio + persistência
 ```
 
 ---
@@ -57,7 +54,9 @@ to_do_list/
 git clone https://github.com/seu-usuario/to_do_list.git
 
 # 2. Entre na pasta
-cd atvd
+cd to_do_list
+
+# Não há dependências para instalar — projeto usa apenas módulos nativos
 ```
 
 ---
@@ -76,13 +75,13 @@ O servidor iniciará em: `http://localhost:3000`
 
 Base URL: `http://localhost:3000`
 
-| Método | Rota          | Descrição                      |
-|--------|---------------|--------------------------------|
-| GET    | /tasks        | Listar todas as tarefas        |
-| POST   | /tasks        | Criar nova tarefa              |
-| GET    | /tasks/:id    | Buscar tarefa por ID           |
-| PUT    | /tasks/:id    | Atualizar título e/ou status   |
-| DELETE | /tasks/:id    | Deletar tarefa                 |
+| Método | Rota          | Descrição                      | Nível   |
+|--------|---------------|--------------------------------|---------|
+| GET    | /tasks        | Listar todas as tarefas        | Base    |
+| POST   | /tasks        | Criar nova tarefa              | Base    |
+| GET    | /tasks/:id    | Buscar tarefa por ID           | Pleno   |
+| PUT    | /tasks/:id    | Atualizar título e/ou status   | Júnior  |
+| DELETE | /tasks/:id    | Deletar tarefa                 | Base    |
 
 ---
 
