@@ -1,4 +1,7 @@
-# 📝 To-Do List API — Node.js (HTTP + CommonJS)
+# 📝 Atividade API — Node.js (HTTP + CommonJS)
+
+DAVI LEVY LEMOS SOARES 
+2º DS MANHÃ TURMA A
 
 > Atividade API PW II — Prof. Marcos Brandão Rios — Etec Bento Quirino  
 > Nível: **Sênior (MB)** — inclui Júnior + Pleno + Sênior
