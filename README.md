@@ -7,7 +7,7 @@
 
 ## Descrição do Projeto
 
-API RESTful de lista de tarefas construída **sem frameworks**, utilizando apenas:
+API de lista de tarefas construída , utilizando apenas:
 
 - Node.js puro
 - Módulo nativo `http`
@@ -32,17 +32,17 @@ Sem dependências externas — apenas módulos nativos do Node.js.
 ```
 to_do_list/
 ├── data/
-│   └── tasks.json              ← banco de dados em arquivo (Nível Sênior)
+│   └── Tarefas.json              ← banco de dados em arquivo (Nível Sênior)
 └── src/
     ├── app.js                  ← servidor HTTP
     ├── controllers/
-    │   └── taskController.js   ← controla o fluxo das requisições
+    │   └── TarefaController.js   ← controla o fluxo das requisições
     ├── models/
-    │   └── taskModel.js        ← define a estrutura da tarefa
+    │   └── TarefaModelos.js        ← define a estrutura da tarefa
     ├── routes/
-    │   └── taskRoutes.js       ← mapeia URLs para controllers
+    │   └── TarefaRoutes.js       ← mapeia URLs para controllers
     └── services/
-        └── taskService.js      ← lógica de negócio + persistência
+        └── TarefaService.js      ← lógica de negócio + persistência
 ```
 
 ---
@@ -54,9 +54,7 @@ to_do_list/
 git clone https://github.com/seu-usuario/to_do_list.git
 
 # 2. Entre na pasta
-cd to_do_list
-
-# Não há dependências para instalar — projeto usa apenas módulos nativos
+cd atvd
 ```
 
 ---
@@ -75,13 +73,13 @@ O servidor iniciará em: `http://localhost:3000`
 
 Base URL: `http://localhost:3000`
 
-| Método | Rota          | Descrição                      | Nível   |
-|--------|---------------|--------------------------------|---------|
-| GET    | /tasks        | Listar todas as tarefas        | Base    |
-| POST   | /tasks        | Criar nova tarefa              | Base    |
-| GET    | /tasks/:id    | Buscar tarefa por ID           | Pleno   |
-| PUT    | /tasks/:id    | Atualizar título e/ou status   | Júnior  |
-| DELETE | /tasks/:id    | Deletar tarefa                 | Base    |
+| Método | Rota          | Descrição                      |
+|--------|---------------|--------------------------------|
+| GET    | /tasks        | Listar todas as tarefas        |
+| POST   | /tasks        | Criar nova tarefa              |
+| GET    | /tasks/:id    | Buscar tarefa por ID           |
+| PUT    | /tasks/:id    | Atualizar título e/ou status   |
+| DELETE | /tasks/:id    | Deletar tarefa                 |
 
 ---
 
