@@ -4,7 +4,7 @@ DAVI LEVY LEMOS SOARES
 2º DS MANHÃ 
 TURMA A
 
-> Atividade API PW II — Prof. Marcos Brandão Rios — Etec Bento Quirino  
+> Atividade API PW II — Prof. Marcos Brandão Rios Etec Bento Quirino  
 > Nível: **Sênior (MB)** — inclui Júnior + Pleno + Sênior
 
 ---
@@ -19,54 +19,6 @@ API de lista de tarefas construída **sem frameworks**, utilizando apenas:
 - Módulo nativo `fs` para **persistência de dados em arquivo JSON**
 
 ---
-
-## Tecnologias Utilizadas
-
-| Tecnologia | Versão |
-|------------|--------|
-| Node.js    | 18+    |
-| JavaScript | ES2020 |
-
----
-
-## Estrutura de Pastas
-
-```
-to_do_list/
-├── data/
-│   └── tasks.json              ← banco de dados em arquivo (Nível Sênior)
-└── src/
-    ├── app.js                  ← servidor HTTP
-    ├── controllers/
-    │   └── TarefaController.js   ← controla o fluxo das requisições
-    ├── models/
-    │   └── TarefaModelos.js        ← define a estrutura da tarefa
-    ├── routes/
-    │   └── TarefaRoutes.js       ← mapeia URLs para controllers
-    └── services/
-        └── TarefaService.js      ← lógica de negócio + persistência
-```
-
----
-
-## Instalação
-
-```bash
-# 1. Clone o repositório
-git clone https://github.com/Davi-levy/atividade-todo-list-pw/
-
-# 2. Entre na pasta
-cd atividade-todo-list-pw-main
-
-
-## Execução
-
-```bash
-node src/app.js
-```
-
-O servidor iniciará em: `http://localhost:3000`
-
 ---
 
 ## Endpoints da API
@@ -129,31 +81,3 @@ DELETE /tasks/1
 ```
 
 ---
-
-## Explicação da Solução
-
-O projeto segue a separação
-
-- **Routes** — porta de entrada; identifica URL e método HTTP, delega ao controller
-- **Controller** — lê o body, chama o service, envia a resposta JSON
-- **Service** — lógica de negócio: validações, criação, atualização e deleção
-- **Model** — define o formato do objeto tarefa
-
-### Destaques por Nível
-
-**Júnior** — campo `completed` no Model; endpoint PUT aceita `{ completed: true/false }` para alternar o status da tarefa.
-
-**Pleno** — endpoint `GET /tasks/:id` com rota dinâmica manual via `url.split('/')`, retornando 404 caso o ID não exista.
-
-**Sênior** — persistência via módulo nativo `fs`. As funções `loadTasks()` e `saveTasks()` leem e gravam o arquivo `data/tasks.json` a cada operação, garantindo que os dados sobrevivam ao reinício do servidor.
-
----
-
-## Status Codes Utilizados
-
-| Código | Significado       |
-|--------|-------------------|
-| 200    | Sucesso           |
-| 201    | Criado            |
-| 400    | Requisição inválida |
-| 404    | Não encontrado    |
